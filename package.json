@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-emdkscanner",
+  "name": "@bullzer/cordova-plugin-emdkscanner",
   "version": "1.0.0",
   "description": "Cordova Plugin for EMDK supported devices ",
   "main": "EmdkScanner.js",
