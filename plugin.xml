@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-emdkscanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>EMDK BarcodeScanner</name>
+	<js-module name="EmdkScanner" src="www/EmdkScanner.js">
+		<clobbers target="emdkScanner" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="EmdkScanner">
+				<param name="android-package" value="com.bullzer.cordova.emdkscanner.EmdkScanner" />
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="com.symbol.emdk.permission.EMDK" />
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<uses-library android:name="com.symbol.emdk" android:required="false" />
+		</config-file>
+
+		<framework src="src/android/extras.gradle" custom="true" type="gradleReference" />
+
+		<source-file src="src/android/EmdkScanner.java" target-dir="src/com/bullzer/cordova/emdkscanner" />
+		<source-file src="src/android/com.symbol.emdk.jar" target-dir="lib" />
+	</platform>
+</plugin>

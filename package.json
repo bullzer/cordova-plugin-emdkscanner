@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-emdkscanner",
+  "version": "1.0.0",
+  "description": "Cordova Plugin for EMDK supported devices ",
+  "main": "EmdkScanner.js",
+  "cordova": {
+    "id": "cordova-plugin-emdkscanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bullzer/cordova-plugin-emdkscanner.git"
+  },
+  "keywords": [
+    "cordova"
+  ],
+  "author": "BULLZER TECHNOLOGIES, SL",
+  "license": "MIT"
+}
